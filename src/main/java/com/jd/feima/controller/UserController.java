@@ -31,6 +31,11 @@ public class UserController {
 	private MenuService menuService;
 	@Autowired
 	private RoleService roleService;
+
+	@RequestMapping
+	public String helloworld(){
+		return "/user/helloworld";
+	}
 	
 	@RequestMapping("/showInfo/{userId}")
 	public String showUserInfo(ModelMap modelMap, @PathVariable int userId){
